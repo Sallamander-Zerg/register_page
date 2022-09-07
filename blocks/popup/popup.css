@@ -1,0 +1,6 @@
+.popup {
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  display: flex;
+}

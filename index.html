@@ -8,15 +8,34 @@
         <section class="popup" >
             <form class="popup__form" name="form" >
                 <h2 class="popup__title">Форма регестрации</h2>
-                <input name="field-mesto" type="name" class="popup__field" id="field1" placeholder="Имя">
-                <input name="field-mesto" type="text" class="popup__field" id="field2" placeholder="Фамилия">
-                <input name="field-mesto" type="email" class="popup__field" id="field3" placeholder="Email">
-                <input name="field-src" type="password" class="popup__field" id="field4"  placeholder="Пароль">
-                <input name="field-src" type="password" class="popup__field" id="field5"  placeholder="Подтверждение пароля">
-                <input name="field-src" type="date" class="popup__field" id="field6" placeholder="Дата рождения">
+                <input name="field-name" type="name" class="popup__field" id="field1" placeholder="Имя"  minlength="4" maxlength="20" required>
+                <p class="popup__error-block">
+                <span class="popup__field-error field-name-error"></span>
+                </p>
+                <input name="field-surname" type="name" class="popup__field" id="field2" placeholder="Фамилия"  minlength="4" maxlength="20" required>
+                <p class="popup__error-block">
+                <span class="popup__field-error field-surname-error"></span>
+                </p>
+                <input name="field-email" type="email" class="popup__field" id="field3" placeholder="Email" required>
+                <p class="popup__error-block">
+                <span class="popup__field-error field-email-error"></span>
+                </p>
+                <input name="field-password" type="password" class="popup__field" id="field4"  placeholder="Пароль" minlength="1" maxlength="8" irequired>
+                <p class="popup__error-block">
+                <span class="popup__field-error field-password-error"></span>
+                </p>
+                <input name="field-password2" type="password" class="popup__field" id="field5"  placeholder="Подтверждение пароля" minlength="1" maxlength="8" required>
+                <p class="popup__error-block">
+                <span class="popup__field-error field-password2-error"></span>
+                </p>
+                <input name="field-date" type="date" class="popup__field" id="field6" placeholder="Дата рождения" required>
+                <p class="popup__error-block">
+                <span class="popup__field-error field-date-error"></span>
+                </p>
                 <button type="submit"  class="popup__save-button">Отправить</button>
             </form>
         </section>  
         <script src="scripts/index.js"></script>
+        <script src="scripts/validate.js"></script>
     </body>
 </html>

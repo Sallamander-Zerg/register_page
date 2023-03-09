@@ -8,29 +8,29 @@
         <section class="popup" >
             <form class="popup__form" name="form" >
                 <h2 class="popup__title">Форма регестрации</h2>
-                <input name="field-name" type="name" class="popup__field" id="field1" placeholder="Имя"  minlength="4" maxlength="20" required>
+                <input name="field-name" type="name" class="popup__field" id="field1" placeholder="Имя" pattern="^[а-яА-ЯA-za-z]+$" minlength="4" maxlength="20" required>
                 <p class="popup__error-block">
-                <span class="popup__field-error field-name-error"></span>
+                <span class="popup__field-error field-name-error" id="errorN"></span>
                 </p>
-                <input name="field-surname" type="name" class="popup__field" id="field2" placeholder="Фамилия"  minlength="4" maxlength="20" required>
+                <input name="field-surname" type="name" class="popup__field" id="field2" placeholder="Фамилия" pattern="^[а-яА-ЯA-za-z]+$" minlength="4" maxlength="20" required>
                 <p class="popup__error-block">
-                <span class="popup__field-error field-surname-error"></span>
+                <span class="popup__field-error field-surname-error" id="errorN"></span>
                 </p>
                 <input name="field-email" type="email" class="popup__field" id="field3" placeholder="Email" required>
                 <p class="popup__error-block">
                 <span class="popup__field-error field-email-error"></span>
                 </p>
-                <input name="field-password" type="password" class="popup__field" id="field4"  placeholder="Пароль" minlength="1" maxlength="8" irequired>
+                <input name="field-password" type="password" class="popup__field" id="field4"  placeholder="Пароль" pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$" minlength="1" maxlength="8" required>
                 <p class="popup__error-block">
-                <span class="popup__field-error field-password-error"></span>
+                <span class="popup__field-error field-password-error" id="errorP"></span>
                 </p>
-                <input name="field-password2" type="password" class="popup__field" id="field5"  placeholder="Подтверждение пароля" minlength="1" maxlength="8" required>
+                <input name="field-password2" type="password" class="popup__field" id="field5"  placeholder="Подтверждение пароля" pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$" minlength="1" maxlength="8" required>
                 <p class="popup__error-block">
-                <span class="popup__field-error field-password2-error"></span>
+                <span class="popup__field-error field-password2-error" id="errorP"></span>
                 </p>
                 <input name="field-date" type="date" class="popup__field" id="field6" placeholder="Дата рождения" required>
                 <p class="popup__error-block">
-                <span class="popup__field-error field-date-error"></span>
+                <span class="popup__field-error field-date-error" id="errorD"></span>
                 </p>
                 <button type="submit"  class="popup__save-button">Отправить</button>
             </form>
